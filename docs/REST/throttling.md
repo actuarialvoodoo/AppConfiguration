@@ -4,7 +4,7 @@ Configuration stores have limits on the requests that they may serve. Any reques
 
 Throttling is divided into different quota policies:
 
-**TotalRequests** - total amount of requests/sec
+**TotalRequests** - total amount of requests/second
 		
 **WriteRequests** - total amount of write requests/second
 
