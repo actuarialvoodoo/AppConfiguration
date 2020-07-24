@@ -1,6 +1,9 @@
 ## Microsoft.Extensions.Configuration.AzureAppConfiguration
 ### [Package (NuGet)](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.AzureAppConfiguration)
 
+### 4.0.0-preview - July 23, 2020
+* Added support for deserializing configuration settings with JSON content type. [#191](https://github.com/Azure/AppConfiguration-DotnetProvider/issues/191)
+
 ### 3.0.2 - July 01, 2020
 * Fixed an issue that may cause configuration refresh to be ignored when the key registered to refresh all configuration has changed. [#178](https://github.com/Azure/AppConfiguration-DotnetProvider/issues/178)
 
