@@ -588,7 +588,7 @@ curl -X "$method" -d "$body" "${header_args[@]}" "https://$host$url"
 
 ### R
 
-```
+```r
 library(httr)
 library(digest)
 library(lubridate)
@@ -636,15 +636,16 @@ sign_request <- function(host, method, url, body, credential, secret) {
         )
 }
 
-res <- httr::GET("https://crbra-appconfig-em20-dev.azconfig.io/keys?api-version=1.0",
-          sign_request(
-              host,
-              method = "GET",
-              url = "/keys?api-version=1.0", 
-              body = '', 
-              credential = credential, 
-              secret = secret 
-        ),
-        verbose()
+host <- "{config store name}.azconfig.io"
+method <- "GET"
+url <- "/kv?api-version=1.0"
+body <- ""
+credential <- "<Credential>"
+secret <- "<Secret>"
+
+
+res <- httr::GET(
+	url = paste0("https://", host, url),
+	sign_request(host, method, url, body, credential, secret)
 )
 ```
